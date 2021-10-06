@@ -1,1 +1,12 @@
 
+img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+
+.img {
+    display: flex;
+}
