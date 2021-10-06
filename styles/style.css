@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+}
 
 img {
     display: flex;
@@ -5,8 +9,25 @@ img {
     text-align: center;
     width: 150px;
     height: 150px;
+    border-radius: 30%;
 }
 
 .img {
     display: flex;
+}
+
+#error {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type=radio]:checked + img {
+    border: 5px solid black;
+}
+
+body {
+    background-color: #93A8AC;
 }

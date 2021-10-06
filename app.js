@@ -24,12 +24,16 @@ button.addEventListener('click', ()=>{
   // console.log(userThrow);
   // console.log(computerThrow);
 
-  if(didUserWin(userThrow, computerThrow)){
+  console.log(userThrow, computerThrow);
+  if(userThrow === computerThrow){
+    draw++;
+  }else if(didUserWin(userThrow, computerThrow)){
     win++;
 
   } else {
     lost++;
   }
+
   winSpan.textContent = win;
   lossSpan.textContent = lost;
   drawSpan.textContent = draw;
