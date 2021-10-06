@@ -24,15 +24,28 @@ button.addEventListener('click', ()=>{
   // console.log(userThrow);
   // console.log(computerThrow);
 
-  console.log(userThrow, computerThrow);
+  // console.log(userThrow, computerThrow);
   if(userThrow === computerThrow){
     draw++;
-  }else if(didUserWin(userThrow, computerThrow)){
+  } else if(userThrow === 'rock' && computerThrow === 'scissors'){
     win++;
-
+  } else if(userThrow === 'scissors' && computerThrow === 'paper'){
+    win++;
+  } else if(userThrow === 'paper' && computerThrow === 'scissors'){
+    win++;
   } else {
     lost++;
   }
+  
+  
+  
+  
+    // }else if(didUserWin(userThrow, computerThrow)){
+  //   win++;
+
+  // } else {
+  //   lost++;
+  // }
 
   winSpan.textContent = win;
   lossSpan.textContent = lost;

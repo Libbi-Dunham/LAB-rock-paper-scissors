@@ -1,5 +1,5 @@
-export function didUserWin(userChoice, actualDraw){
-    return userChoice === actualDraw;
+export function didUserWin(userThrow, actualDraw){
+    return userThrow === actualDraw;
 }
 
 export function getRandomThrow(){
