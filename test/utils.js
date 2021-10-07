@@ -1,5 +1,12 @@
-export function didUserWin(userThrow, actualDraw){
-    return userThrow === actualDraw;
+export function didUserWin(userThrow, computerThrow){
+    if(userThrow === computerThrow){return 'draw'}
+    else if(userThrow === 'rock' && computerThrow === 'scissors'){return 'win'}
+    else if(userThrow === 'scissors' && computerThrow === 'paper'){return 'win'}
+    else if(userThrow === 'paper' && computerThrow === 'scissors'){return 'win'}
+    else if(userThrow === 'rock' && computerThrow === 'paper'){return 'lost'}
+    else if(userThrow === 'paper' && computerThrow === 'rock')
+    {return 'win'}
+    else{return 'lost'}
 }
 
 export function getRandomThrow(){

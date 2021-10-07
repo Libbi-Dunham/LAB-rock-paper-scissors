@@ -1,6 +1,4 @@
 import { didUserWin, getRandomThrow } from "./test/utils.js";
-
-
 const button = document.getElementById('play');
 const winSpan = document.getElementById('win');
 const lossSpan = document.getElementById('lost');
@@ -23,32 +21,12 @@ button.addEventListener('click', ()=>{
   const computerThrow = getRandomThrow();
   // console.log(userThrow);
   // console.log(computerThrow);
-
   // console.log(userThrow, computerThrow);
-  if(userThrow === computerThrow){
-    draw++;
-  } else if(userThrow === 'rock' && computerThrow === 'scissors'){
-    win++;
-  } else if(userThrow === 'scissors' && computerThrow === 'paper'){
-    win++;
-  } else if(userThrow === 'paper' && computerThrow === 'scissors'){
-    win++;
+  if(didUserWin(userThrow, computerThrow) === 'draw'){
+    draw++; drawSpan.textContent = draw;
+  } else if(didUserWin(userThrow, computerThrow) === 'win'){
+    win++; winSpan.textContent = win;
   } else {
-    lost++;
+    lost++; lossSpan.textContent = lost;
   }
-  
-  
-  
-  
-    // }else if(didUserWin(userThrow, computerThrow)){
-  //   win++;
-
-  // } else {
-  //   lost++;
-  // }
-
-  winSpan.textContent = win;
-  lossSpan.textContent = lost;
-  drawSpan.textContent = draw;
-
-});
+  });
