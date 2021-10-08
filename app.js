@@ -1,4 +1,4 @@
-import { didUserWin, getRandomThrow } from "./test/utils.js";
+import { didUserWin, getRandomThrow } from './utils.js';
 const button = document.getElementById('play');
 const winSpan = document.getElementById('win');
 const lossSpan = document.getElementById('lost');
@@ -11,22 +11,22 @@ let draw = 0;
 
 button.addEventListener('click', ()=>{
   // console.log('clicking button');
-  const selected = document.querySelector('input[type=radio]:checked');
+    const selected = document.querySelector('input[type=radio]:checked');
   // console.log(selected);
-  if(!selected){
-    return error.classList.remove('hidden');
-  }
-  error.classList.add('hidden');
-  const userThrow = selected.value;
-  const computerThrow = getRandomThrow();
+    if (!selected){
+        return error.classList.remove('hidden');
+    }
+    error.classList.add('hidden');
+    const userThrow = selected.value;
+    const computerThrow = getRandomThrow();
   // console.log(userThrow);
   // console.log(computerThrow);
   // console.log(userThrow, computerThrow);
-  if(didUserWin(userThrow, computerThrow) === 'draw'){
-    draw++; drawSpan.textContent = draw;
-  } else if(didUserWin(userThrow, computerThrow) === 'win'){
-    win++; winSpan.textContent = win;
-  } else {
-    lost++; lossSpan.textContent = lost;
-  }
-  });
+    if (didUserWin(userThrow, computerThrow) === 'draw'){
+        draw++; drawSpan.textContent = draw;
+    } else if (didUserWin(userThrow, computerThrow) === 'win'){
+        win++; winSpan.textContent = win;
+    } else {
+        lost++; lossSpan.textContent = lost;
+    }
+});
